@@ -1,4 +1,4 @@
-import './App.css'
+import './app.css'
 import Home from './components/Home/Home';
 import Co from './components/course/Courses';
 import { Routes, Route, Navigate } from "react-router-dom"; // Added Navigate
