@@ -4,13 +4,14 @@ import { Link } from "react-router-dom"; // Use Link to prevent page reloads
 function Navbar() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [sticky, setSticky] = useState(false);
-  const authUser = localStorage.getItem("Users");
+  const [authUser, setAuthUser] = useState(localStorage.getItem("Users"));
 
-  const handleLogout = () => {
-    localStorage.removeItem("Users");
-    alert("Logged out successfully");
-    window.location.reload();
-  };
+ const handleLogout = () => {
+  localStorage.removeItem("Users");
+  setAuthUser(null); // ✅ update state
+  alert("Logged out successfully");
+  window.location.href = "/login"; // ✅ redirect properly
+};
 
   useEffect(() => {
     const element = document.documentElement;
