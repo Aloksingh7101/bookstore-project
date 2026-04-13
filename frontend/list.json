@@ -1,0 +1,50 @@
+[
+    {
+    "id":1,
+    "Name":"Story book",
+    "title":"welcome to new book",
+    "price":0,
+    "category":"free",
+    "image":"https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1742062196~exp=1742065796~hmac=cc1457ed1b3cd0ddf1cd789be262800360d8cda6f81ccf1fb94cfdba19bef743&w=826"
+   },
+    {
+    "id":2,
+    "Name":"cricket book",
+    "title":"welcome to new book",
+    "price":10,
+    "category":"free",
+    "image":"https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1742062196~exp=1742065796~hmac=cc1457ed1b3cd0ddf1cd789be262800360d8cda6f81ccf1fb94cfdba19bef743&w=826"
+   },
+    {
+    "id":3,
+    "Name":"boolbood book",
+    "title":"welcome to new book",
+    "price":20,
+    "category":"free",
+    "image":"https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1742062196~exp=1742065796~hmac=cc1457ed1b3cd0ddf1cd789be262800360d8cda6f81ccf1fb94cfdba19bef743&w=826"
+   },
+    {
+    "id":4,
+    "Name":"drama book",
+    "title":"welcome to new book",
+    "price":30,
+    "category":"free",
+    "image":"https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1742062196~exp=1742065796~hmac=cc1457ed1b3cd0ddf1cd789be262800360d8cda6f81ccf1fb94cfdba19bef743&w=826"
+   },
+    {
+    "id":5,
+    "Name":"comedy book",
+    "title":"welcome to new book",
+    "price":60,
+    "category":"free",
+    "image":"https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1742062196~exp=1742065796~hmac=cc1457ed1b3cd0ddf1cd789be262800360d8cda6f81ccf1fb94cfdba19bef743&w=826"
+   },
+   {
+    "id":6,
+    "Name":"hindi book",
+    "title":"welcome to new book",
+    "price":90,
+    "category":"free",
+    "image":"https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1742062196~exp=1742065796~hmac=cc1457ed1b3cd0ddf1cd789be262800360d8cda6f81ccf1fb94cfdba19bef743&w=826"
+   }
+]
