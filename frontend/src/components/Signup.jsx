@@ -20,7 +20,7 @@ function Signup() {
     };
 
     try {
-      const res = await axios.post("http://localhost:4001/user/signup", userInfo);
+      const res = await axios.post("https://bookstore-project-ijvd.onrender.com/user/signup", userInfo);
       if (res.data) {
         // ❌ REMOVED: localStorage.setItem("Users", ...) 
         // This ensures they are NOT logged in yet.

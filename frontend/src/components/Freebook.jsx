@@ -11,7 +11,7 @@ const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get("https://bookstore-project-ijvd.onrender.com/book");
         const filterdata=res.data.filter((data)=>{
      return data.category==="free";
 })
