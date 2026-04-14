@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Use Link to prevent page reloads
+import { Link, useNavigate } from "react-router-dom"; // Use Link to prevent page reloads
 
 function Navbar() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [sticky, setSticky] = useState(false);
-  const [authUser, setAuthUser] = useState(localStorage.getItem("Users"));
+   const [authUser, setAuthUser] = useState(null); // ✅ ADD THIS
+  
+const navigate = useNavigate();
+ useEffect(() => {
+    const user = localStorage.getItem("Users");
+    setAuthUser(user);
+  }, []);
 
- const handleLogout = () => {
+const handleLogout = () => {
   localStorage.removeItem("Users");
-  setAuthUser(null); // ✅ update state
+  setAuthUser(null);
   alert("Logged out successfully");
-  window.location.href = "/login"; // ✅ redirect properly
+  navigate("/login"); // ✅ correct way
 };
 
   useEffect(() => {

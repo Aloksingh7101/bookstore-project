@@ -7,6 +7,7 @@ function Login() {
     email: "",
     password: "",
   });
+
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate(); 
 
@@ -19,25 +20,29 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const userInfo = {
       email: formData.email,
       password: formData.password,
     };
 
     try {
-      const res = await axios.post("https://bookstore-project-ijvd.onrender.com/user/login", userInfo);
-      
+      const res = await axios.post(
+        "https://bookstore-project-ijvd.onrender.com/user/login",
+        userInfo
+      );
+
       if (res.data) {
         setShowPopup(true);
         localStorage.setItem("Users", JSON.stringify(res.data.user));
 
         setTimeout(() => {
           setShowPopup(false);
-          // Using window.location.assign forces a refresh so App.js 
-          // picks up the new localStorage data immediately
-          window.location.assign("/"); 
+          navigate("/");
+          window.location.reload(); // ✅ important
         }, 1500);
       }
+
     } catch (err) {
       if (err.response) {
         alert("Error: " + err.response.data.message);
@@ -56,10 +61,8 @@ function Login() {
         </div>
       )}
 
-      {/* Added 'relative' here so the cross button positions correctly */}
       <div className="card w-96 bg-base-100 shadow-xl p-6 relative">
         
-        {/* ❌ Close Button: Redirects to Home */}
         <Link 
           to="/" 
           className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
